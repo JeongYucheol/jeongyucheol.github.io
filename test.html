@@ -1,38 +1,114 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정유철 | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+		<script type="text/javascript" href="script.js">
 
-<html>
-
-<head lang="ko">
-	<title>JeongYucheol Works</title>
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="theme-color" content="#ffffff">
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-	<script>
-	 $(document).ready(function(){
-		 $('.slider').bxSlider();
-	 });
- </script>
-
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		</script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
+<body>
+    <!-- <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">YC.JEONG</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav> -->
 
-<body class="is-preload">
-	<div class="slider">
-	    <div>I am a slide.</div>
-	    <div>I am another slide.</div>
-	  </div>
+    <header class="hero">
+        <div class="container">
+            <h1>안녕하세요, <span class="highlight">정유철</span>입니다.</h1>
+            <p>사용자 경험을 고민하는 프론트엔드 개발자입니다.</p>
+            <a href="#projects" class="btn">프로젝트 보기</a>
+        </div>
+    </header>
 
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>기술을 통해 일상의 불편함을 해결하는 것에 즐거움을 느낍니다. 깔끔한 코드와 확장 가능한 구조를 지향합니다.</p>
+                    <ul class="skills">
+                        <li>HTML5/CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>React / Vue.js</li>
+                        <li>Git / GitHub</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-img" style="background-color: #ddd;"></div>
+                    <div class="project-info">
+                        <h3>프로젝트 명 1</h3>
+                        <p>프로젝트에 대한 간단한 설명입니다. 기술 스택과 주요 기능을 기술합니다.</p>
+                        <div class="tags">
+                            <span>React</span>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img" style="background-color: #ccc;"></div>
+                    <div class="project-info">
+                        <h3>프로젝트 명 2</h3>
+                        <p>반응형 웹 디자인을 적용한 포트폴리오 사이트 구축 프로젝트입니다.</p>
+                        <div class="tags">
+                            <span>HTML/CSS</span>
+                            <span>JS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+		<section id="projects" class="section bg-light">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-grid">
+            <div class="project-card" onclick="openModal('project1')">
+                <div class="project-img" style="background-color: #ddd;"></div>
+                <div class="project-info">
+                    <h3>커뮤니티 웹 서비스</h3>
+                    <p>React와 Firebase를 활용한 실시간 커뮤니티...</p>
+                    <div class="tags"><span>React</span><span>Firebase</span></div>
+                </div>
+            </div>
+            </div>
+    </div>
+</section>
+
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div id="modal-body">
+            </div>
+    </div>
+</div>
+
+    <footer id="contact">
+        <div class="container">
+            <p>© 2026 Jeong Yu Cheol. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/jeongyucheol">GitHub</a>
+                <a href="mailto:your-email@example.com">Email</a>
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>
