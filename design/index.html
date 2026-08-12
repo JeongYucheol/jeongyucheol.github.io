@@ -16,8 +16,8 @@
     <a class="brand" href="./">JY®</a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" data-menu>Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="주요 메뉴" data-nav>
+      <a href="#skills">Skills</a>
       <a href="#work">Work</a>
-      <a href="#ai-motion">AI + Motion</a>
       <a href="../performance/">Performance ↗</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -33,7 +33,11 @@
               <source src="../images/video01.mp4" type="video/mp4">
             </video>
           </figure>
-          <figure class="hero-panel hero-panel-one"><img src="../images/cosworker01.gif" alt=""></figure>
+          <figure class="hero-panel hero-panel-one">
+            <video autoplay muted loop playsinline preload="metadata" data-motion>
+              <source src="../images/cosworker01.mp4" type="video/mp4">
+            </video>
+          </figure>
           <figure class="hero-panel hero-panel-three"><img src="../images/cosworker03.gif" alt=""></figure>
         </div>
       </div>
@@ -46,30 +50,40 @@
         <p>보기 좋은 장면을 넘어,<br>브랜드가 어떤 모습으로<br><strong>기억될지 설계합니다.</strong></p>
         <span>Strategy · Identity · AI Content · Motion</span>
       </div>
-      <div class="hero-meta"><span>Seoul, KR</span><span>Selected works<br>2015—2026</span><a href="#ai-motion">Play the reel ↓</a></div>
+      <div class="hero-meta"><span>Seoul, KR</span><span>Selected works<br>2015—2026</span><a href="#skills">Explore skills ↓</a></div>
       <button class="motion-toggle" type="button" aria-pressed="false" data-motion-toggle><span aria-hidden="true">Ⅱ</span> Pause motion</button>
     </section>
 
-    <section id="ai-motion" class="ai-lab">
+    <section id="skills" class="ai-lab" aria-labelledby="skills-title">
       <div class="shell ai-lab-head reveal">
-        <div><p class="kicker">AI &amp; Motion Lab · Selected experiments</p><h2>생성하고,<br>움직이고,<br><i>구현합니다.</i></h2></div>
-        <div class="ai-lab-note"><p>브랜드의 상상을 빠르게 시각화하고 실제 콘텐츠로 완성합니다. 생성형 AI와 3D를 콘셉트 개발에 활용하고, 모션과 편집으로 캠페인에 필요한 장면을 설계합니다.</p><ul><li>AI-assisted image &amp; video</li><li>3D modeling &amp; motion</li><li>Key visual &amp; compositing</li><li>Video art direction &amp; editing</li></ul></div>
+        <div><p class="kicker">Skills · End-to-end creative capability</p><h2 id="skills-title">설계하고,<br>영상화하고,<br><i>구현합니다.</i></h2></div>
+        <div class="ai-lab-note"><p>브랜드 전략과 아이덴티티를 설계하고, AI·3D·편집을 활용해 움직이는 콘텐츠로 확장하며, 반응형 웹을 직접 코딩해 실제 경험으로 완성합니다.</p><ul><li>Brand strategy &amp; visual identity</li><li>AI-assisted video &amp; motion</li><li>Art direction &amp; content production</li><li>Web design &amp; front-end coding</li></ul></div>
       </div>
       <div class="motion-grid reveal">
         <figure class="motion-card motion-card-wide">
           <video autoplay muted loop playsinline preload="metadata" data-motion><source src="../images/oh02.mp4" type="video/mp4"></video>
-          <figcaption><span>01 / 3D Motion</span><strong>Concept film &amp; product world</strong></figcaption>
+          <figcaption><span>01 / Branding</span><strong>Strategy, identity &amp; art direction</strong></figcaption>
         </figure>
         <figure class="motion-card">
           <video autoplay muted loop playsinline preload="metadata" data-motion><source src="../images/oh07.mp4" type="video/mp4"></video>
-          <figcaption><span>02 / AI-assisted</span><strong>Product visual &amp; compositing</strong></figcaption>
+          <figcaption><span>02 / Video &amp; Motion</span><strong>AI, 3D, editing &amp; compositing</strong></figcaption>
         </figure>
-        <figure class="motion-card">
-          <video autoplay muted loop playsinline preload="metadata" data-motion><source src="../images/gr01.mp4" type="video/mp4"></video>
-          <figcaption><span>03 / Fashion Motion</span><strong>Digital model &amp; art direction</strong></figcaption>
+        <figure class="motion-card skill-code">
+          <div class="code-stage">
+            <div class="code-toolbar"><span></span><span></span><span></span><b>design/experience.js</b></div>
+            <pre aria-hidden="true"><code><span>const</span> brand = {
+  strategy: <i>'clear'</i>,
+  identity: <i>'distinct'</i>,
+  experience: <i>'responsive'</i>
+};
+
+<span>build</span>(brand).ship();</code></pre>
+            <div class="code-preview"><small>LIVE / RESPONSIVE</small><strong>Brand to<br>browser.</strong><em>DESIGN × CODE</em></div>
+          </div>
+          <figcaption><span>03 / Web Coding</span><strong>Responsive design &amp; front-end</strong></figcaption>
         </figure>
       </div>
-      <div class="ai-marquee" aria-hidden="true"><div>AI CREATION · MOTION DESIGN · 3D VISUALIZATION · VIDEO EDITING · ART DIRECTION ·&nbsp;</div></div>
+      <div class="ai-marquee" aria-hidden="true"><div>BRAND STRATEGY · VISUAL IDENTITY · VIDEO &amp; MOTION · AI CREATION · WEB DESIGN · FRONT-END CODING ·&nbsp;</div></div>
     </section>
 
     <section id="work" class="work" aria-label="선정 프로젝트">
