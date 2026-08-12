@@ -17,7 +17,7 @@
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" data-menu>Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="주요 메뉴" data-nav>
       <a href="#work">Work</a>
-      <a href="#approach">Approach</a>
+      <a href="#ai-motion">AI + Motion</a>
       <a href="../performance/">Performance ↗</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -25,13 +25,19 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <img class="hero-image" src="../images/jerrican07.jpg" alt="제리캔 아이웨어의 디지털 브랜드 시스템">
+      <div class="hero-media" aria-hidden="true">
+        <img class="hero-image hero-fallback" src="../images/oh01.png" alt="">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="../images/oh01.png" data-motion>
+          <source src="../images/oh01.mp4" type="video/mp4">
+        </video>
+      </div>
       <div class="hero-shade"></div>
       <div class="hero-copy">
-        <p>Brand Designer<br>&amp; Creative Director</p>
+        <p>Brand Designer &amp; Creative Director<br><span>AI · Motion · 3D</span></p>
         <h1 id="hero-title">Designing how<br>brands are<br><em>remembered.</em></h1>
       </div>
-      <div class="hero-meta"><span>Seoul, KR</span><span>Selected works<br>2015—2026</span><a href="#work">Scroll to explore ↓</a></div>
+      <div class="hero-meta"><span>Seoul, KR</span><span>Selected works<br>2015—2026</span><a href="#ai-motion">Play the reel ↓</a></div>
+      <button class="motion-toggle" type="button" aria-pressed="false" data-motion-toggle><span aria-hidden="true">Ⅱ</span> Pause motion</button>
     </section>
 
     <section id="approach" class="manifesto shell reveal">
@@ -41,6 +47,28 @@
         <p>전략에서 이름과 언어를 찾고, 아이덴티티에서 태도를 만들고, 콘텐츠와 공간·디지털 경험까지 일관된 브랜드 세계로 확장합니다.</p>
         <ul><li>Brand strategy &amp; identity</li><li>Art direction &amp; campaign</li><li>Digital &amp; visual system</li></ul>
       </div>
+    </section>
+
+    <section id="ai-motion" class="ai-lab">
+      <div class="shell ai-lab-head reveal">
+        <div><p class="kicker">AI &amp; Motion Lab · Selected experiments</p><h2>생성하고,<br>움직이고,<br><i>구현합니다.</i></h2></div>
+        <div class="ai-lab-note"><p>브랜드의 상상을 빠르게 시각화하고 실제 콘텐츠로 완성합니다. 생성형 AI와 3D를 콘셉트 개발에 활용하고, 모션과 편집으로 캠페인에 필요한 장면을 설계합니다.</p><ul><li>AI-assisted image &amp; video</li><li>3D modeling &amp; motion</li><li>Key visual &amp; compositing</li><li>Video art direction &amp; editing</li></ul></div>
+      </div>
+      <div class="motion-grid reveal">
+        <figure class="motion-card motion-card-wide">
+          <video autoplay muted loop playsinline preload="metadata" data-motion><source src="../images/oh02.mp4" type="video/mp4"></video>
+          <figcaption><span>01 / 3D Motion</span><strong>Concept film &amp; product world</strong></figcaption>
+        </figure>
+        <figure class="motion-card">
+          <video autoplay muted loop playsinline preload="metadata" data-motion><source src="../images/oh07.mp4" type="video/mp4"></video>
+          <figcaption><span>02 / AI-assisted</span><strong>Product visual &amp; compositing</strong></figcaption>
+        </figure>
+        <figure class="motion-card">
+          <video autoplay muted loop playsinline preload="metadata" data-motion><source src="../images/gr01.mp4" type="video/mp4"></video>
+          <figcaption><span>03 / Fashion Motion</span><strong>Digital model &amp; art direction</strong></figcaption>
+        </figure>
+      </div>
+      <div class="ai-marquee" aria-hidden="true"><div>AI CREATION · MOTION DESIGN · 3D VISUALIZATION · VIDEO EDITING · ART DIRECTION ·&nbsp;</div></div>
     </section>
 
     <section id="work" class="work" aria-label="선정 프로젝트">

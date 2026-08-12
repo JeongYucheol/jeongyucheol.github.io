@@ -4,3 +4,8 @@ menuButton?.addEventListener('click',()=>{const open=menuButton.getAttribute('ar
 nav?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{menuButton?.setAttribute('aria-expanded','false');nav.classList.remove('is-open')}));
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:.08,rootMargin:'0px 0px -5%'});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const motionButton=document.querySelector('[data-motion-toggle]');
+const motionMedia=[...document.querySelectorAll('[data-motion]')];
+const setMotionState=paused=>{motionMedia.forEach(media=>paused?media.pause():media.play().catch(()=>{}));if(!motionButton)return;motionButton.setAttribute('aria-pressed',String(paused));motionButton.innerHTML=paused?'<span aria-hidden="true">▶</span> Play motion':'<span aria-hidden="true">Ⅱ</span> Pause motion'};
+motionButton?.addEventListener('click',()=>setMotionState(motionButton.getAttribute('aria-pressed')!=='true'));
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)setMotionState(true);
