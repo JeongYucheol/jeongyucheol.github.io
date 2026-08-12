@@ -17,7 +17,17 @@
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" data-menu>Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="주요 메뉴" data-nav>
       <a href="#skills">Skills</a>
-      <a href="#work">Work</a>
+      <div class="nav-work" data-work-menu>
+        <button class="nav-work-trigger" type="button" aria-expanded="false" aria-controls="work-submenu" data-work-trigger>Work <span aria-hidden="true">⌄</span></button>
+        <div id="work-submenu" class="work-submenu" aria-label="프로젝트 장르" data-work-submenu>
+          <a href="#forbidden-eden"><span>Brand Identity</span><small>Forbidden Eden</small></a>
+          <a href="#jerrican"><span>Eyewear &amp; Fashion</span><small>Jerrican</small></a>
+          <a href="#outfitters"><span>Product &amp; Craft</span><small>Outfitters</small></a>
+          <a href="#sellev"><span>Media &amp; Motion</span><small>Sellev</small></a>
+          <a href="#jamiet"><span>Content &amp; Commerce</span><small>Jamiet</small></a>
+          <a href="#greedilous"><span>Fashion &amp; Commerce</span><small>Greedilous</small></a>
+        </div>
+      </div>
       <a href="../performance/">Performance ↗</a>
       <a href="#contact">Contact</a>
     </nav>

@@ -1,7 +1,14 @@
 const menuButton=document.querySelector('[data-menu]');
 const nav=document.querySelector('[data-nav]');
+const workMenu=document.querySelector('[data-work-menu]');
+const workTrigger=document.querySelector('[data-work-trigger]');
+const closeWorkMenu=()=>{workMenu?.classList.remove('is-open');workTrigger?.setAttribute('aria-expanded','false')};
 menuButton?.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')==='true';menuButton.setAttribute('aria-expanded',String(!open));nav.classList.toggle('is-open',!open)});
-nav?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{menuButton?.setAttribute('aria-expanded','false');nav.classList.remove('is-open')}));
+workTrigger?.addEventListener('click',()=>{const open=workTrigger.getAttribute('aria-expanded')==='true';workMenu.classList.toggle('is-open',!open);workTrigger.setAttribute('aria-expanded',String(!open))});
+nav?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{menuButton?.setAttribute('aria-expanded','false');nav.classList.remove('is-open');closeWorkMenu()}));
+document.querySelectorAll('[data-work-submenu] a').forEach(link=>link.addEventListener('click',()=>{const target=document.querySelector(link.hash);if(!target)return;window.setTimeout(()=>{const headerHeight=document.querySelector('[data-header]')?.offsetHeight||0;const top=target.getBoundingClientRect().top+window.scrollY-headerHeight;window.scrollTo({top,behavior:'auto'})},900)}));
+document.addEventListener('click',event=>{if(!workMenu?.contains(event.target))closeWorkMenu()});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'){closeWorkMenu();menuButton?.setAttribute('aria-expanded','false');nav?.classList.remove('is-open')}});
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:.08,rootMargin:'0px 0px -5%'});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 const motionButton=document.querySelector('[data-motion-toggle]');
