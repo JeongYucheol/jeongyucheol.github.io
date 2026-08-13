@@ -25,3 +25,4 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-media{animation:none;transform:none}.ai-marquee>div{animation:none}.reveal{opacity:1;transform:none;transition:none}.project-hero>img{transition:none}}
 .ai-lab h2 .skill-line{font-family:inherit;font-style:normal}.skill-line-plan{font-weight:400}.skill-line-motion{font-weight:600}.skill-line-build{font-weight:800}
 .hero-manifesto p .manifesto-line{font-family:inherit;font-size:inherit;font-style:normal;text-transform:none;letter-spacing:inherit}.manifesto-line-scene{font-weight:400}.manifesto-line-brand{font-weight:600}.manifesto-line-memory{font-weight:800}
+.ai-lab h2#skills-title{line-height:1.02}
